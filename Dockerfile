@@ -3,8 +3,8 @@ FROM alpine:3 as downloader
 ARG PORT
 ENV PORT=$PORT
 
-RUN wget https://github.com/pocketbase/pocketbase/releases/download/v0.16.7/pocketbase_0.16.7_linux_arm64.zip \
-    && unzip pocketbase_0.16.7_linux_arm64.zip \
+RUN wget https://github.com/pocketbase/pocketbase/releases/download/v0.16.7/pocketbase_0.16.7_linux_amd64_cgo.zip \
+    && unzip pocketbase_0.16.7_linux_amd64_cgo.zip \
     && chmod +x /pocketbase
 
 FROM alpine:3
